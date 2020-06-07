@@ -76,7 +76,9 @@ function prompt_steeef_setup {
   local staged_format="${_prompt_steeef_colors[5]}●%f"
 
   # Set editor-info parameters.
-  zstyle ':prezto:module:editor:info:keymap:primary' format '$'
+  zstyle ':prezto:module:editor:info:completing' format '%B${_prompt_steeef_colors[4]}...%f%b'
+  zstyle ':prezto:module:editor:info:keymap:primary' format "%B%F{yellow}🚀 %f%b"
+  zstyle ':prezto:module:editor:info:keymap:alternate' format "%B%F{blue}👾 %f%b"
 
   # Set vcs_info parameters.
   zstyle ':vcs_info:*' enable bzr git hg svn
